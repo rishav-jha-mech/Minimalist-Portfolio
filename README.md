@@ -1,12 +1,7 @@
 # Minimalist Portfolio
 
-This minimalist portfolio template is designed to showcase your skills, projects, and experiences in a clean and professional manner.
-
-
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FJ6l8HAhXaBgIPo8sQE2Gc5%2FDev-Portfolio%3Fpage-id%3D11%253A2%26type%3Ddesign%26node-id%3D38-1145%26viewport%3D678%252C190%252C0.08%26t%3DaPmrrtPvHofWBbeA-1%26scaling%3Dscale-down%26mode%3Ddesign" allowfullscreen></iframe>
-
 ## Introduction
-This portfolio is initially created as a personal project by Rishav Jha to showcase his own skills and experiences. However, the intention is to eventually transform it into a template that can be easily customized and used by developers worldwide.
+This portfolio is initially created as a personal project by me to showcase my own skills and experiences. However, the intention is to eventually transform it into a template that can be easily customized and used by developers worldwide.
 
 ## Features
 - Clean and minimalist design
@@ -23,6 +18,12 @@ To get started with using this portfolio template, follow these steps:
 - Replace the placeholder images and text with your own content.
 - Customize the styling and layout as needed to match your personal branding.
 - Deploy the portfolio to your preferred hosting platform.
+
+## Figma Link 
+
+Status - Designs are Ready 🚀
+
+[Figma Link](https://www.figma.com/proto/J6l8HAhXaBgIPo8sQE2Gc5/Minimalist-Portfolio?page-id=11%3A2&type=design&node-id=11-3&viewport=439%2C241%2C0.14&t=eXCDTD91B53wYsOh-1&scaling=scale-down&starting-point-node-id=47%3A2565&mode=design)
 
 ## Feedback and Contributions
 
