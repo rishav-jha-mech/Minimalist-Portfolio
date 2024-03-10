@@ -4,14 +4,32 @@ import Image from "next/image";
 import styles from "./navbar.module.css";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import gsap from "gsap";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
+  useEffect(() => {
+    gsap.fromTo(
+      "#navbar",
+      { opacity: 0, scale: 0.6 },
+      {
+        opacity: 1,
+        scale: 1,
+        animationDuration: 1,
+        clearProps: "all",
+      }
+    );
+  }, []);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
   return (
-    <nav className={styles.navbar}>
+    <nav className={styles.navbar} id="navbar">
       <a href="/">Rishav.</a>
-      <button onClick={() => setShowMenu(!showMenu)}>
+      <button onClick={() => toggleMenu()}>
         {showMenu ? (
           <Image src="/close.svg" alt="close" width={48} height={48} />
         ) : (
