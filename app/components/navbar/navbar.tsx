@@ -1,13 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import styles from "./navbar.module.css";
-import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import gsap from "gsap";
+import React, { useState } from "react";
+import styles from "./navbar.module.css";
 
 type Props = {
-  id?: string;
+  id: string;
 };
 
 const Navbar: React.FC<Props> = ({ id }) => {
@@ -26,9 +25,9 @@ const Navbar: React.FC<Props> = ({ id }) => {
       <a href="/">Rishav.</a>
       <button onClick={() => toggleMenu()}>
         {showMenu ? (
-          <Image src="/close.svg" alt="close" width={48} height={48} />
+          <Image src="/assets/icons/close.svg" alt="close" width={48} height={48} />
         ) : (
-          <Image src="/menu.svg" alt="menu" width={48} height={48} />
+          <Image src="assets/icons/menu.svg" alt="menu" width={48} height={48} />
         )}
       </button>
       <ul className={showMenu ? styles.active : styles.inactive}>
