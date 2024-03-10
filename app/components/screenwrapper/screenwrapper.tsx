@@ -42,7 +42,7 @@ const ScreenWrapper = ({ animate, children }: ScreenWrapperProps) => {
           animationCompleted={onSplashAnimationDone}
         />
       )}
-      <main className="min-h-screen">
+      <main>
         <Navbar id="navbar" />
         {children}
       </main>

@@ -31,16 +31,29 @@ html {
 
 main {
   max-width: calc(100% - 15rem);
+  height: 100vh;
   margin: auto;
-  background-color: var(--contour-color);
+  padding-top: 98px;
+  padding-bottom: 40px;
+  display: flex;
+  align-items: center;
+  overflow: scroll;
+  /* background-color: var(--contour-color); */
 }
-
+main::-webkit-scrollbar {
+  display: none;
+}
 @media screen and (max-width: 1300px) {
   main {
     max-width: calc(100% - 10rem);
   }
 }
 
+@media screen and (max-width: 1050px) {
+  main {
+    display: block;
+  }
+}
 @media screen and (max-width: 700px) {
   main {
     max-width: calc(100% - 2.5rem);

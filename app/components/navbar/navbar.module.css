@@ -1,3 +1,13 @@
+.navWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--secondary-color);
+  max-width: calc(100% - 15rem);
+  margin: auto;
+}
+
 .navbar {
   padding: 1.75rem 0 1rem 0;
   display: flex;
@@ -52,7 +62,7 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -100vh;
     flex-direction: column;
     justify-content: center;
     background-color: #fff;
@@ -88,5 +98,17 @@
     font-weight: 600;
     margin: 1rem 0;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .navWrapper {
+    max-width: calc(100% - 10rem);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .navWrapper {
+    max-width: calc(100% - 2.5rem);
   }
 }
