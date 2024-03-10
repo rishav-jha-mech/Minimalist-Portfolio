@@ -26,6 +26,7 @@
 
 html {
   background-color: var(--secondary-color);
+  overflow: hidden;
 }
 
 main {

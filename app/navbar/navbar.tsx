@@ -2,32 +2,27 @@
 
 import Image from "next/image";
 import styles from "./navbar.module.css";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 
-const Navbar = () => {
-  const [showMenu, setShowMenu] = useState(false);
+type Props = {
+  id?: string;
+};
 
-  useEffect(() => {
-    gsap.fromTo(
-      "#navbar",
-      { opacity: 0, scale: 0.6 },
-      {
-        opacity: 1,
-        scale: 1,
-        animationDuration: 1,
-        clearProps: "all",
-      }
-    );
-  }, []);
+const Navbar: React.FC<Props> = ({ id }) => {
+  const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
 
   return (
-    <nav className={styles.navbar} id="navbar">
+    <nav
+      className={styles.navbar}
+      id={id}
+      style={{ opacity: id === undefined ? 1 : 0 }}
+    >
       <a href="/">Rishav.</a>
       <button onClick={() => toggleMenu()}>
         {showMenu ? (
