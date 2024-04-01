@@ -6,10 +6,10 @@ import React, { useState } from "react";
 import styles from "./navbar.module.css";
 
 type Props = {
-  id: string;
+  animate: boolean;
 };
 
-const Navbar: React.FC<Props> = ({ id }) => {
+const Navbar: React.FC<Props> = ({ animate }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
@@ -20,8 +20,8 @@ const Navbar: React.FC<Props> = ({ id }) => {
     <div className={styles.navWrapper}>
       <nav
         className={styles.navbar}
-        id={id}
-        style={{ opacity: id === undefined ? 1 : 0 }}
+        id={"navbar"}
+        style={{ opacity: animate ? 0 : 1 }}
       >
         <a href="/">Rishav.</a>
         <button onClick={() => toggleMenu()}>
@@ -43,19 +43,19 @@ const Navbar: React.FC<Props> = ({ id }) => {
         </button>
         <ul className={showMenu ? styles.active : styles.inactive}>
           <li>
-            <Link href={"/"}> About</Link>
+            <Link href={"/about"}> About</Link>
           </li>
           <li>
-            <Link href={"/"}> Experiences</Link>
+            <Link href={"/experiences"}> Experiences</Link>
           </li>
           <li>
-            <Link href={"/"}> Skills</Link>
+            <Link href={"/skills"}> Skills</Link>
           </li>
           <li>
-            <Link href={"/"}> Portfolio</Link>
+            <Link href={"/portfolio"}> Portfolio</Link>
           </li>
           <li>
-            <Link href={"/"}> Contact</Link>
+            <Link href={"/contact"}> Contact</Link>
           </li>
         </ul>
       </nav>

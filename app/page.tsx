@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 
 const Home = () => {
   return (
-    <ScreenWrapper animate={false}>
+    <ScreenWrapper animateSplash={true} animateNavbar={true}>
       <section className={styles.container}>
         <div className={styles.left}>
           <Image

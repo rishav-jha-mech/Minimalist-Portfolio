@@ -1,15 +1,20 @@
 "use client";
-import { ReactNode, useEffect } from "react";
-import SplashScreen from "../loader/splashScreen";
-import Navbar from "../navbar/navbar";
 import gsap from "gsap";
+import { ReactNode, useEffect } from "react";
+import SplashScreen from "../splashscreen/splashScreen";
+import Navbar from "../navbar/navbar";
 
 type ScreenWrapperProps = {
-  animate: boolean;
+  animateSplash: boolean;
+  animateNavbar: boolean;
   children: ReactNode;
 };
 
-const ScreenWrapper = ({ animate, children }: ScreenWrapperProps) => {
+const ScreenWrapper = ({
+  children,
+  animateSplash,
+  animateNavbar,
+}: ScreenWrapperProps) => {
   // If animate is false, then onSplashAnimationDone is never called, hence no animation of navbar
   const onSplashAnimationDone = () => {
     const splash = document.getElementById("splash");
@@ -23,45 +28,46 @@ const ScreenWrapper = ({ animate, children }: ScreenWrapperProps) => {
         opacity: 0,
         onComplete: () => {
           splash?.remove();
-          revealNavbar();
+          if (animateNavbar) {
+            revealNavbar();
+          }
         },
       }
     );
   };
   useEffect(() => {
-    if (!animate) {
+    if (!animateSplash && animateNavbar) {
       revealNavbar();
     }
-  }, [animate]);
+  }, [animateSplash, animateNavbar]);
 
   return (
-    <>
-      {animate && (
-        <SplashScreen
-          id={"splash"}
-          animationCompleted={onSplashAnimationDone}
-        />
-      )}
+    <section>
+      {animateSplash && <SplashScreen animationCompleted={onSplashAnimationDone} />}
       <main>
-        <Navbar id="navbar" />
+        <Navbar animate={animateNavbar} />
         {children}
       </main>
-    </>
+    </section>
   );
 };
 
 export default ScreenWrapper;
 
-const revealNavbar = (): gsap.core.Tween => {
-  return gsap.fromTo(
-    "#navbar",
-    { opacity: 0, y: -70 },
-    {
-      y: 0,
-      opacity: 1,
-      duration: 0.5,
-      ease: "power1.inOut",
-      clearProps: "all",
-    }
-  );
+const revealNavbar = () => {
+  try {
+    gsap.fromTo(
+      "#navbar",
+      { opacity: 0, y: -70 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.5,
+        ease: "power1.inOut",
+        clearProps: "all",
+      }
+    );
+  } catch (error) {
+    console.error("Error in revealNavbar", error);
+  }
 };
