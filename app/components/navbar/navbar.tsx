@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import styles from "./navbar.module.css";
+import { NavbarUrls } from "@/constants";
+import { usePathname } from "next/navigation";
 
 type Props = {
   animate: boolean;
@@ -11,6 +13,8 @@ type Props = {
 
 const Navbar: React.FC<Props> = ({ animate }) => {
   const [showMenu, setShowMenu] = useState(false);
+
+  const pathName = usePathname();
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -42,21 +46,13 @@ const Navbar: React.FC<Props> = ({ animate }) => {
           )}
         </button>
         <ul className={showMenu ? styles.active : styles.inactive}>
-          <li>
-            <Link href={"/about"}> About</Link>
-          </li>
-          <li>
-            <Link href={"/experiences"}> Experiences</Link>
-          </li>
-          <li>
-            <Link href={"/skills"}> Skills</Link>
-          </li>
-          <li>
-            <Link href={"/portfolio"}> Portfolio</Link>
-          </li>
-          <li>
-            <Link href={"/contact"}> Contact</Link>
-          </li>
+          {Object.values(NavbarUrls).map(({ url, name }, index) => {
+            return (
+              <li key={index} className={pathName === url ? styles.activeLink : pathName}>
+                <Link href={url}>{name}</Link>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </div>

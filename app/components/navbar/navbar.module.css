@@ -40,6 +40,10 @@
   border-bottom: 2px solid var(--primary-color);
 }
 
+.navbar > ul .activeLink {
+  border-bottom: 2px solid var(--primary-color);
+}
+
 .navbar > ul > li:last-child {
   margin: 0 0;
 }

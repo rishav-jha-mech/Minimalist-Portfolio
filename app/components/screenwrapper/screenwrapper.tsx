@@ -1,6 +1,6 @@
 "use client";
 import gsap from "gsap";
-import { ReactNode, useEffect } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import SplashScreen from "../splashscreen/splashScreen";
 import Navbar from "../navbar/navbar";
 
@@ -15,35 +15,19 @@ const ScreenWrapper = ({
   animateSplash,
   animateNavbar,
 }: ScreenWrapperProps) => {
-  // If animate is false, then onSplashAnimationDone is never called, hence no animation of navbar
-  const onSplashAnimationDone = () => {
-    const splash = document.getElementById("splash");
-    gsap.fromTo(
-      splash,
-      {
-        opacity: 1,
-      },
-      {
-        duration: 0.4,
-        opacity: 0,
-        onComplete: () => {
-          splash?.remove();
-          if (animateNavbar) {
-            revealNavbar();
-          }
-        },
-      }
-    );
-  };
+  const [animateSplashScreen, setAnimateSplashScreen] = useState(animateSplash);
+
   useEffect(() => {
-    if (!animateSplash && animateNavbar) {
+    if (!animateSplashScreen && animateNavbar) {
       revealNavbar();
     }
-  }, [animateSplash, animateNavbar]);
+  }, [animateSplashScreen, animateNavbar]);
 
   return (
     <section>
-      {animateSplash && <SplashScreen animationCompleted={onSplashAnimationDone} />}
+      {animateSplashScreen && <SplashScreen animationCompleted={() =>
+        onSplashAnimationDone(animateNavbar, setAnimateSplashScreen)
+      } />}
       <main>
         <Navbar animate={animateNavbar} />
         {children}
@@ -53,6 +37,27 @@ const ScreenWrapper = ({
 };
 
 export default ScreenWrapper;
+
+// If animate is false, then onSplashAnimationDone is never called, hence no animation of navbar
+const onSplashAnimationDone = (animateNavbar: boolean, onComplete: (state: boolean) => void) => {
+  const splash = document.getElementById("splash");
+  gsap.fromTo(
+    splash,
+    {
+      opacity: 1,
+    },
+    {
+      duration: 0.4,
+      opacity: 0,
+      onComplete: () => {
+        onComplete(false);
+        if (animateNavbar) {
+          revealNavbar();
+        }
+      },
+    }
+  );
+};
 
 const revealNavbar = () => {
   try {
