@@ -24,28 +24,17 @@
 	}
 }
 *::-webkit-scrollbar {
-	display: none;
+	/* display: none; */
 }
 html {
 	background-color: var(--secondary-color);
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 main {
 	max-width: calc(100% - 15rem);
-	height: 100vh;
+	height: calc(100vh - 98px);
 	margin: auto;
-	padding-top: 98px;
-	padding-bottom: 40px;
-	display: flex;
-	align-items: center;
-	overflow: scroll;
-	/* background-color: var(--contour-color); */
-}
-
-#experiences {
-	overflow: hidden;
-	padding-bottom: 0;
 }
 
 h1 {

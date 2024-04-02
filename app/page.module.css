@@ -1,3 +1,10 @@
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
 .container {
 	flex: 1;
 	display: flex;

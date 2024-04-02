@@ -27,10 +27,8 @@ const ScreenWrapper = ({ children, animateSplash, animateNavbar }: ScreenWrapper
 			{animateSplashScreen && (
 				<SplashScreen animationCompleted={() => onSplashAnimationDone(animateNavbar, setAnimateSplashScreen)} />
 			)}
-			<main id={pathName.replaceAll('/', '')}>
-				<Navbar animate={animateNavbar} />
-				{children}
-			</main>
+			<Navbar animate={animateNavbar} />
+			<main id={pathName.replaceAll('/', '')}>{children}</main>
 		</section>
 	);
 };

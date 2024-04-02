@@ -48,3 +48,49 @@ export const MyExperiences = [
 		date: 'Oct 2023 - Present',
 	},
 ];
+
+export const MySkills = [
+	{
+		title: 'Languages',
+		children: [
+			['C', 'C++', 'Javascript', 'Typescript', 'Python', 'Dart'],
+			['HTML', 'CSS', 'SCSS'],
+		],
+		textColor: '--secondary-color',
+		backgroundColor: '--primary-color',
+	},
+	{
+		title: 'Frameworks & Libraries',
+		children: [
+			['Phaser', 'Three JS'],
+			['Puppeteer', 'Beautiful Soup'],
+			['React JS', 'Next JS', 'Jest'],
+			['Django', 'Flask', 'Express JS'],
+			['Material UI', 'Bootstrap', 'Tailwind'],
+		],
+		textColor: '--primary-color',
+		backgroundColor: '--light-grey',
+	},
+	{
+		title: 'App Development',
+		children: [['React Native', 'Flutter', 'Electron']],
+		textColor: '--secondary-color',
+		backgroundColor: '--primary-color',
+	},
+	{
+		title: 'DevOps & Version Control',
+		children: [
+			['Docker', 'Linux', 'AWS EC2', 'GCP'],
+			['Git', 'Github', 'Gitlab'],
+		],
+		textColor: '--primary-color',
+		backgroundColor: '--secondary-grey',
+		borderColor: '--primary-color',
+	},
+	{
+		title: 'UI/UX Design',
+		children: [['Figma', 'Canva']],
+		textColor: '--secondary-color',
+		backgroundColor: '--primary-color',
+	},
+];
