@@ -1,116 +1,116 @@
 .container {
-  flex: 1;
-  display: flex;
-  align-items: center;
+	flex: 1;
+	display: flex;
+	align-items: center;
 }
 .container > .left {
-  flex: 6;
-  width: 100%;
-  padding-right: 2rem;
-  display: flex;
-  justify-content: start;
-  align-items: center;
+	flex: 6;
+	width: 100%;
+	padding-right: 2rem;
+	display: flex;
+	justify-content: start;
+	align-items: center;
 }
 .container > .left .profilePic {
-  width: 350px;
+	width: 350px;
 }
 
 .container > .right {
-  flex: 8;
+	flex: 8;
 }
 
 .container > .right > h4 {
-  font-weight: bold;
-  font-size: 2.5rem;
-  line-height: 0.5;
+	font-weight: bold;
+	font-size: 2.5rem;
+	line-height: 0.5;
 }
 
 .container > .right > h1 {
-  font-weight: bold;
-  font-size: 4rem;
+	font-weight: bold;
+	font-size: 4rem;
 }
 
 .container > .right > p {
-  font-weight: 200;
-  margin-top: 2rem;
-  font-size: 1.5rem;
+	font-weight: 200;
+	margin-top: 2rem;
+	font-size: 1.5rem;
 }
 
 .container > .right > .btnContainer {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 3rem;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 3rem;
 }
 .container > .right > .btnContainer button {
-  font-size: 1rem;
-  font-weight: 400;
-  border-radius: 6px;
-  margin-top: 1rem;
+	font-size: 1rem;
+	font-weight: 400;
+	border-radius: 6px;
+	margin-top: 1rem;
 }
 .container > .right > .btnContainer > .solidBtn {
-  padding: 1.2rem 3rem;
-  color: var(--secondary-color);
-  background-color: var(--primary-color);
-  margin-right: 2rem;
+	padding: 1.2rem 3rem;
+	color: var(--secondary-color);
+	background-color: var(--primary-color);
+	margin-right: 2rem;
 }
 
 .container > .right > .btnContainer > .outlineBtn {
-  padding: 1.2rem 4rem;
-  font-weight: 400;
-  color: var(--primary-color);
-  background-color: var(--secondary-color);
-  border: 2px solid var(--primary-color);
+	padding: 1.2rem 4rem;
+	font-weight: 400;
+	color: var(--primary-color);
+	background-color: var(--secondary-color);
+	border: 2px solid var(--primary-color);
 }
 
 @media (max-width: 1050px) {
-  .container {
-    display: block;
-  }
-  .container > .left {
-    padding-right: 0;
-    justify-content: center;
-  }
-  .container > .left .profilePic {
-    width: 275px;
-  }
-  .container > .right > h4 {
-    margin-top: 1rem;
-    font-size: 2rem;
-  }
-  .container > .right > h1 {
-    font-size: 3rem;
-  }
-  .container > .right > p {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-  }
-  .container > .right > .btnContainer {
-    margin-top: 2rem;
-  }
+	.container {
+		display: block;
+	}
+	.container > .left {
+		padding-right: 0;
+		justify-content: center;
+	}
+	.container > .left .profilePic {
+		width: 275px;
+	}
+	.container > .right > h4 {
+		margin-top: 1rem;
+		font-size: 2rem;
+	}
+	.container > .right > h1 {
+		font-size: 3rem;
+	}
+	.container > .right > p {
+		margin-top: 1rem;
+		font-size: 1.2rem;
+	}
+	.container > .right > .btnContainer {
+		margin-top: 2rem;
+	}
 }
 
 @media (max-width: 540px) {
-  .container > .left .profilePic {
-    width: 175px;
-  }
-  .container > .right > h4 {
-    margin-top: 2rem;
-    line-height: 0.75;
-    font-size: 1.75rem;
-  }
-  .container > .right > .btnContainer {
-    display: block;
-  }
-  .container > .right > .btnContainer button {
-    margin-top: 1rem;
-    flex: 1;
-    width: 100%;
-    display: block;
-  }
-  .container > .right > .btnContainer .solidBtn {
-    margin-right: 0;
-  }
-  .container > .right > .btnContainer .outlineBtn {
-    margin-bottom: 2rem;
-  }
+	.container > .left .profilePic {
+		width: 175px;
+	}
+	.container > .right > h4 {
+		margin-top: 2rem;
+		line-height: 0.75;
+		font-size: 1.75rem;
+	}
+	.container > .right > .btnContainer {
+		display: block;
+	}
+	.container > .right > .btnContainer button {
+		margin-top: 1rem;
+		flex: 1;
+		width: 100%;
+		display: block;
+	}
+	.container > .right > .btnContainer .solidBtn {
+		margin-right: 0;
+	}
+	.container > .right > .btnContainer .outlineBtn {
+		margin-bottom: 2rem;
+	}
 }
