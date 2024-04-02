@@ -23,7 +23,9 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
+*::-webkit-scrollbar {
+  display: none;
+}
 html {
   background-color: var(--secondary-color);
   overflow: hidden;
@@ -40,6 +42,17 @@ main {
   overflow: scroll;
   /* background-color: var(--contour-color); */
 }
+
+#experiences {
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
 main::-webkit-scrollbar {
   display: none;
 }
@@ -57,5 +70,8 @@ main::-webkit-scrollbar {
 @media screen and (max-width: 700px) {
   main {
     max-width: calc(100% - 2.5rem);
+  }
+  #experiences {
+    max-width: 100%;
   }
 }

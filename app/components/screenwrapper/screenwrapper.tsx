@@ -3,6 +3,8 @@ import gsap from "gsap";
 import { ReactNode, useEffect, useState } from "react";
 import SplashScreen from "../splashscreen/splashScreen";
 import Navbar from "../navbar/navbar";
+import { usePathname } from "next/navigation";
+import { NavbarUrls } from "@/constants";
 
 type ScreenWrapperProps = {
   animateSplash: boolean;
@@ -16,6 +18,7 @@ const ScreenWrapper = ({
   animateNavbar,
 }: ScreenWrapperProps) => {
   const [animateSplashScreen, setAnimateSplashScreen] = useState(animateSplash);
+  const pathName = usePathname();
 
   useEffect(() => {
     if (!animateSplashScreen && animateNavbar) {
@@ -28,7 +31,7 @@ const ScreenWrapper = ({
       {animateSplashScreen && <SplashScreen animationCompleted={() =>
         onSplashAnimationDone(animateNavbar, setAnimateSplashScreen)
       } />}
-      <main>
+      <main id={pathName.replaceAll('/', '')}>
         <Navbar animate={animateNavbar} />
         {children}
       </main>
