@@ -89,17 +89,17 @@
 
 @media (max-width: 1000px) {
 	.container {
-		display: block;
-		padding-bottom: 5rem;
+		flex-direction: column-reverse;
 		text-align: center;
-	}
-	.container > .right {
-		display: none;
 	}
 	.container > .left {
 		padding-right: 0;
 	}
 	.container > .left > h1 {
 		font-size: 3rem;
+	}
+	.school,
+	.college {
+		position: absolute;
 	}
 }

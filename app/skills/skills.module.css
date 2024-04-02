@@ -75,7 +75,21 @@
 	}
 }
 @media (max-width: 425px) {
+	.container h2 {
+		margin: 1rem 0;
+	}
 	.container > .right > .placeHolder {
 		height: 300px;
+	}
+	.container .skillSet {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.container .skillItem {
+		margin: 0.5rem 0.5rem 0.5rem 0;
+		padding: 0.25rem 1rem;
+		font-size: 0.8rem;
+		border: 2px solid transparent;
+		border-radius: 80px;
 	}
 }
