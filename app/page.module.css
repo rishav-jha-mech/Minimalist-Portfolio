@@ -98,7 +98,7 @@
 
 @media (max-width: 540px) {
 	.container > .left .profilePic {
-		width: 175px;
+		width: 225px;
 	}
 	.container > .right > h4 {
 		margin-top: 2rem;

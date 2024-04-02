@@ -15,6 +15,7 @@ type ScreenWrapperProps = {
 const ScreenWrapper = ({ children, animateSplash, animateNavbar }: ScreenWrapperProps) => {
 	const [animateSplashScreen, setAnimateSplashScreen] = useState(animateSplash);
 	const pathName = usePathname();
+	const [showMenu, setShowMenu] = useState(false);
 
 	useEffect(() => {
 		if (!animateSplashScreen && animateNavbar) {
@@ -27,8 +28,8 @@ const ScreenWrapper = ({ children, animateSplash, animateNavbar }: ScreenWrapper
 			{animateSplashScreen && (
 				<SplashScreen animationCompleted={() => onSplashAnimationDone(animateNavbar, setAnimateSplashScreen)} />
 			)}
-			<Navbar animate={animateNavbar} />
-			<main id={pathName.replaceAll('/', '')}>{children}</main>
+			<Navbar animate={animateNavbar} showMenu={showMenu} setShowMenu={setShowMenu} />
+			{!showMenu && <main id={pathName.replaceAll('/', '')}>{children}</main>}
 		</section>
 	);
 };

@@ -9,11 +9,11 @@ import { usePathname } from 'next/navigation';
 
 type Props = {
 	animate: boolean;
+	showMenu: boolean;
+	setShowMenu: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const Navbar: React.FC<Props> = ({ animate }) => {
-	const [showMenu, setShowMenu] = useState(false);
-
+const Navbar: React.FC<Props> = ({ animate, showMenu, setShowMenu }) => {
 	const pathName = usePathname();
 
 	const toggleMenu = () => {
