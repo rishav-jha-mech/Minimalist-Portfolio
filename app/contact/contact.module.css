@@ -1,0 +1,142 @@
+.container img {
+	max-width: unset !important;
+}
+.container > h1 {
+	margin-top: 2.5rem;
+	text-align: center;
+}
+.container > p {
+	font-size: 1.5rem;
+	text-align: center;
+	margin: 1rem 2.5rem;
+}
+
+.contactMe {
+	display: flex;
+	align-items: start;
+	margin: 3rem 2.5rem;
+}
+.contactMe .left,
+.contactMe .right {
+	flex: 1;
+}
+.contactMe .left .cardItem {
+	display: flex;
+	align-items: start;
+	margin-bottom: 1.5rem;
+}
+
+.contactMe .left .cardItem .icon {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	height: 50px;
+	width: 50px;
+}
+
+.contactMe .left .cardItem h2 {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.contactMe .left .cardItem p {
+	font-size: 1.25rem;
+}
+.contactMe .right label,
+.contactMe .right input,
+.contactMe .right textarea {
+	display: block;
+	width: 100%;
+	margin-bottom: 0.875rem;
+}
+
+.contactMe .right label {
+	font-size: 1.25rem;
+	margin-bottom: 0.5rem;
+}
+
+.contactMe .right input {
+	height: 3.25rem;
+	padding: 0.5rem 1rem;
+	margin-bottom: 1rem;
+	border: 2px solid var(--primary-color);
+	border-radius: 6px;
+}
+
+.contactMe .right textarea {
+	min-height: 136px;
+	padding: 0.5rem 1rem;
+	margin-bottom: 1rem;
+	border: 2px solid var(--primary-color);
+	border-radius: 6px;
+}
+
+.contactMe .right button {
+	margin: 2rem 0 3rem 0;
+	background-color: var(--primary-color);
+	display: block;
+	width: 100%;
+	color: var(--secondary-color);
+	font-size: 1.25rem;
+	height: 3.25rem;
+	padding: 0 1rem;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem 1rem;
+}
+
+@media (max-width: 1000px) {
+	.contactMe {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		margin: 0;
+	}
+	.container > p {
+		margin: 1rem 0;
+	}
+	.contactMe .left {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.contactMe .left .cardItem {
+		width: 50%;
+		padding: 1rem 0;
+		margin-bottom: 1rem;
+	}
+}
+@media (max-width: 700px) {
+	.contactMe {
+		margin: 2rem 0;
+	}
+	.contactMe .left .cardItem .icon{
+		align-items: center;
+	}
+	.container > h1{
+		font-size: 3rem;
+	}
+	.container > p{
+		margin: 1rem 0;
+	}
+	.container > p,
+	.contactMe .left .cardItem h2 {
+		font-size: 1.25rem;
+	}
+	.contactMe .left .cardItem p {
+		font-size: 1rem;
+	}
+	.contactMe .left .cardItem {
+		width: 100%;
+		padding: 1rem;
+		border-radius: 1rem;
+		border: 2px solid var(--primary-color);
+		margin-bottom: 1.75rem;
+	}
+}

@@ -118,3 +118,26 @@ export const MyPortfolio = [
 		poster: '/assets/images/portfolio/uvd.webp',
 	},
 ];
+
+export const MyContacts = [
+	{
+		asset: '/assets/icons/contact/email.svg',
+		title: 'Email',
+		content: 'rishav.nitdgp24@gmail.com',
+	},
+	{
+		asset: '/assets/icons/contact/linkedin.svg',
+		title: 'LinkedIn',
+		content: 'rishav-devraj',
+	},
+	{
+		asset: '/assets/icons/contact/github.svg',
+		title: 'Github',
+		content: 'rishav-jha-mech',
+	},
+	{
+		asset: '/assets/icons/contact/location.svg',
+		title: 'Location',
+		content: 'Bangalore, India',
+	},
+];
