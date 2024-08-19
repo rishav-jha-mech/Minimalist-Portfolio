@@ -1,0 +1,126 @@
+.container {
+	margin-top: 2rem;
+	padding-bottom: 4rem;
+}
+.container .backBtn {
+	display: flex;
+	align-items: center;
+	font-size: 1.25rem;
+	color: var(--primary-color);
+}
+.container > h1 {
+	font-size: 2.75rem;
+	display: block;
+	margin-top: 1rem;
+}
+
+.container > p {
+	font-size: 1.25rem;
+	margin-top: 0.5rem;
+}
+
+.container > .tableWrapper {
+	margin-top: 1rem;
+	border-radius: 1rem;
+	padding: calc(40px - 1rem) 40px;
+	box-shadow: 12px 11px 63.7px 0 rgba(0, 0, 0, 0.08);
+}
+
+.container > .tableWrapper table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: auto;
+	overflow-x: scroll;
+}
+
+.container > .tableWrapper table th,
+.container > .tableWrapper table td {
+	padding: 1rem 0.25rem;
+	border-bottom: 1px solid var(--light-grey);
+	text-align: start;
+	white-space: normal;
+	word-break: break-word;
+	text-transform: capitalize;
+}
+.container > .tableWrapper table td > .capsule {
+	background-color: var(--dark-grey);
+	font-size: 0.75rem;
+	color: var(--secondary-color);
+	padding: 0.75rem 1.25rem;
+	border-radius: 2rem;
+	margin: 0.25rem;
+	display: inline-block;
+	white-space: normal;
+}
+
+.container > .tableWrapper table .builtWith {
+	max-width: 400px;
+}
+
+.container .cardWrapper {
+	margin-top: 1rem;
+}
+
+.container .card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 1rem;
+	box-shadow: 12px 11px 63.7px 0 rgba(0, 0, 0, 0.08);
+	margin-bottom: 1rem;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.container .card .header {
+	width: 100%;
+	padding: 1rem;
+	font-size: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	text-transform: capitalize;
+	background-color: var(--dark-grey);
+	color: var(--secondary-color);
+}
+
+.container .card .content {
+	width: 100%;
+	padding: 1rem;
+}
+.container .card .content h2 {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.container .card .content .capsule {
+	background-color: var(--dark-grey);
+	font-size: 0.75rem;
+	color: var(--secondary-color);
+	padding: 0.5rem 0.75rem;
+	border-radius: 2rem;
+	margin: 0.25rem;
+	display: inline-block;
+	white-space: normal;
+}
+
+.container .card .content .capsule:nth-child(1) {
+	margin-left: 0;
+}
+
+.container .card .content .btnContainer{
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	margin-top: 1rem;
+}
+
+.container .card .content .btnContainer a{
+	margin: 0.5rem;
+	font-size: 0.75rem;
+	background-color: var(--dark-grey);
+	color: var(--secondary-color);
+	padding: 0.75rem 1rem;
+	border-radius: 5px;
+}

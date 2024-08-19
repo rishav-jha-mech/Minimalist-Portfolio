@@ -22,7 +22,7 @@ const Portfolio = () => {
 						))}
 					</section>
 					<h3>
-						<Link href="/portfolio">View All Projects&nbsp;&nbsp;&nbsp;</Link>
+						<Link href="/projects">View All Projects&nbsp;&nbsp;&nbsp;</Link>
 						<Image src="/assets/icons/arrow-right.svg" alt="arrow-right" width={28} height={28} />
 					</h3>
 				</div>

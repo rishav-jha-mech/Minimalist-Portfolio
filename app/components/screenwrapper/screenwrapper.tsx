@@ -1,18 +1,18 @@
 'use client';
 import gsap from 'gsap';
-import { ReactNode, useEffect, useState } from 'react';
-import SplashScreen from '../splashscreen/splashScreen';
-import Navbar from '../navbar/navbar';
 import { usePathname } from 'next/navigation';
-import { NavbarUrls } from '@/constants';
+import { ReactNode, useEffect, useState } from 'react';
+import Navbar from '../navbar/navbar';
+import SplashScreen from '../splashscreen/splashScreen';
 
 type ScreenWrapperProps = {
 	animateSplash: boolean;
 	animateNavbar: boolean;
+	showNavbar?: boolean;
 	children: ReactNode;
 };
 
-const ScreenWrapper = ({ children, animateSplash, animateNavbar }: ScreenWrapperProps) => {
+const ScreenWrapper = ({ children, animateSplash, animateNavbar, showNavbar = true }: ScreenWrapperProps) => {
 	const [animateSplashScreen, setAnimateSplashScreen] = useState(animateSplash);
 	const pathName = usePathname();
 	const [showMenu, setShowMenu] = useState(false);
@@ -28,7 +28,7 @@ const ScreenWrapper = ({ children, animateSplash, animateNavbar }: ScreenWrapper
 			{animateSplashScreen && (
 				<SplashScreen animationCompleted={() => onSplashAnimationDone(animateNavbar, setAnimateSplashScreen)} />
 			)}
-			<Navbar animate={animateNavbar} showMenu={showMenu} setShowMenu={setShowMenu} />
+			{showNavbar && <Navbar animate={animateNavbar} showMenu={showMenu} setShowMenu={setShowMenu} />}
 			{!showMenu && <main id={pathName.replaceAll('/', '')}>{children}</main>}
 		</section>
 	);
