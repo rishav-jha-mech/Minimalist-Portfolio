@@ -6,7 +6,7 @@
 	background-color: var(--secondary-color);
 	max-width: calc(100% - 15rem);
 	margin: auto;
-	z-index: 1000;
+	z-index: 100;
 }
 
 .navbar {

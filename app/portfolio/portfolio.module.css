@@ -33,9 +33,9 @@
 }
 
 .portfolioItem {
-	height: 350px;
+	height: 250px;
 	margin: 1rem 1rem;
-	width: 350px;
+	width: 250px;
 	border-radius: 1rem;
 	background: #ddd;
 	overflow: hidden;

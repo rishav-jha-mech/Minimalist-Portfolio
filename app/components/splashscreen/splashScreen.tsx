@@ -56,7 +56,7 @@ const SplashScreen: React.FC<Props> = ({ animationCompleted }) => {
 		<div className={styles.background} ref={splashScreenRef} id={'splash'}>
 			<div id="circle" className={styles.circle} style={{ opacity: 0 }} />
 			<div id="title" className={styles.title} style={{ opacity: 0 }}>
-				RISHAV JHA .
+				RISHAV JHA <span className={styles.theme}>.</span>
 			</div>
 		</div>
 	);

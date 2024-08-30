@@ -1,5 +1,5 @@
 export const NavbarUrls = {
-	ABOUT: { name: 'About', url: '/about' },
+	// ABOUT: { name: 'About', url: '/about' },
 	EXPERIENCES: { name: 'Experiences', url: '/experiences' },
 	SKILLS: { name: 'Skills', url: '/skills' },
 	PORTFOLIO: { name: 'Portfolio', url: '/portfolio' },
@@ -116,6 +116,13 @@ export const MyPortfolio = [
 		download videos from various platforms like Youtube, Facebook,
 		Instagram, Twitter, etc.`,
 		poster: '/assets/images/portfolio/uvd.webp',
+	},
+	{
+		name: 'Treklers Passenger App',
+		content: `Treklers is a Taxi Booking App that allows users to book a cab
+		and track the driver in real-time. It has several options live
+		location and emergency calling.`,
+		poster: '/assets/images/portfolio/treklers.webp',
 	},
 ];
 
