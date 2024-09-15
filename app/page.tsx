@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import ScreenWrapper from './components/screenwrapper/screenwrapper';
+import ScreenWrapper from './components/screenWrapper/screenWrapper';
 import styles from './page.module.css';
 
 const Home = () => {

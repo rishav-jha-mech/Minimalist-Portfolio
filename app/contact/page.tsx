@@ -1,17 +1,20 @@
-import ScreenWrapper from '@/components/screenwrapper/screenwrapper';
+import ScreenWrapper from '@/components/screenWrapper/screenWrapper';
 import { MyContacts } from '@/constants';
 import styles from './contact.module.css';
 import Image from 'next/image';
+import Header, { HeaderVariant } from '@/components/header/header';
 
 const ContactMe = () => {
 	return (
 		<ScreenWrapper animateSplash={false} animateNavbar={false}>
 			<div className={styles.container}>
-				<h1>Contact Me</h1>
-				<p>
-					Feel free to reach out for inquiries or to simply start a conversation. I&apos;m eager to connect
-					and collaborate with you. Let&apos;s get in touch!
-				</p>
+				<Header variant={HeaderVariant.Primary} text="Contact Me" />
+				<Header
+					variant={HeaderVariant.Secondary}
+					text="
+					Feel free to reach out for inquiries or to simply start a conversation. I'm eager to connect
+					and collaborate with you. Let's get in touch!"
+				/>
 				<section className={styles.contactMe}>
 					<div className={styles.left}>
 						{MyContacts.map(({ asset, title, content }, index) => (

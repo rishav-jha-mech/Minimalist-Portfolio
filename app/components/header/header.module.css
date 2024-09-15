@@ -1,0 +1,21 @@
+.header {
+	margin-top: 2.5rem;
+	text-align: center;
+}
+
+.secondaryHeader {
+	font-size: 1.5rem;
+	text-align: center;
+	margin: 1rem 2.5rem;
+}
+
+@media (max-width: 768px) {
+	.header {
+		font-size: 3rem;
+		line-height: 3.75rem;
+	}
+	.secondaryHeader {
+		font-size: 1.25rem;
+		margin: 1rem 0;
+	}
+}

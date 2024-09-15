@@ -1,18 +1,23 @@
 import React from 'react';
-import ScreenWrapper from '@/components/screenwrapper/screenwrapper';
+import ScreenWrapper from '@/components/screenWrapper/screenWrapper';
 import styles from './experiences.module.css';
 import Image from 'next/image';
 import { MyExperiences } from '@/constants';
+import Header, { HeaderVariant } from '@/components/header/header';
 
 const Experiences = () => {
 	return (
 		<ScreenWrapper animateSplash={false} animateNavbar={false}>
 			<div className={styles.container}>
-				<h1>My Experiences</h1>
-				<p>
+				<div className={styles.topSection}>
+					<Header variant={HeaderVariant.Primary} text="My Experiences" />
+					<Header
+						variant={HeaderVariant.Secondary}
+						text="
 					Complementing my academic pursuits, my hands-on experiences through internships and projects have
-					fortified my expertise in real-world applications.
-				</p>
+					fortified my expertise in real-world applications."
+					/>
+				</div>
 				<section className={styles.experiences}>
 					<div className={styles.midLine} />
 					{MyExperiences.map(({ title, subTitle, date }, index) => {

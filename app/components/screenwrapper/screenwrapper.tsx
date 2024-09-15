@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { usePathname } from 'next/navigation';
 import { ReactNode, useEffect, useState } from 'react';
 import Navbar from '../navbar/navbar';
-import SplashScreen from '../splashscreen/splashScreen';
+import SplashScreen from '../splashScreen/splashScreen';
 
 type ScreenWrapperProps = {
 	animateSplash: boolean;
