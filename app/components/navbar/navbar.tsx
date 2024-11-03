@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import styles from './navbar.module.css';
-import { NavbarUrls } from '@/constants';
+import { NavbarUrls } from '../../constants';
 import { usePathname } from 'next/navigation';
 
 type Props = {

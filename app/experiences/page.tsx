@@ -2,7 +2,7 @@ import React from 'react';
 import ScreenWrapper from '@/components/screenWrapper/screenWrapper';
 import styles from './experiences.module.css';
 import Image from 'next/image';
-import { MyExperiences } from '@/constants';
+import { MyExperiences } from '../constants';
 import Header, { HeaderVariant } from '@/components/header/header';
 
 const Experiences = () => {

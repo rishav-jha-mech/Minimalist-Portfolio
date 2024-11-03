@@ -1,8 +1,9 @@
 import ScreenWrapper from '@/components/screenWrapper/screenWrapper';
-import { MyContacts } from '@/constants';
+import { MyContacts } from '../constants';
 import styles from './contact.module.css';
 import Image from 'next/image';
 import Header, { HeaderVariant } from '@/components/header/header';
+import { SVG_ASSETS } from '../../public/assets/icons';
 
 const ContactMe = () => {
 	return (
@@ -20,7 +21,7 @@ const ContactMe = () => {
 						{MyContacts.map(({ asset, title, content }, index) => (
 							<div key={index} className={styles.cardItem}>
 								<div className={styles.icon}>
-									<Image src={asset} alt={title} width={40} height={40} />
+									{asset}
 								</div>
 								<div className={styles.content}>
 									<h2>{title}</h2>

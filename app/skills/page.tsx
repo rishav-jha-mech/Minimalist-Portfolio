@@ -2,7 +2,7 @@
 
 import ScreenWrapper from '@/components/screenWrapper/screenWrapper';
 import styles from './skills.module.css';
-import { MySkills } from '@/constants';
+import { MySkills } from '../constants';
 import Header, { HeaderVariant } from '@/components/header/header';
 
 const Skills = () => {

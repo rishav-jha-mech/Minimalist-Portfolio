@@ -1,6 +1,6 @@
 import ScreenWrapper from '@/components/screenWrapper/screenWrapper';
 import styles from './portfolio.module.css';
-import { MyPortfolio } from '@/constants';
+import { MyPortfolio } from '../constants';
 import Image from 'next/image';
 import Link from 'next/link';
 import Header, { HeaderVariant } from '@/components/header/header';

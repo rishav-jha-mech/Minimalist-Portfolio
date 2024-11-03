@@ -1,3 +1,5 @@
+import { SVG_ASSETS } from "../public/assets/icons";
+
 export const NavbarUrls = {
 	// ABOUT: { name: 'About', url: '/about' },
 	EXPERIENCES: { name: 'Experiences', url: '/experiences' },
@@ -5,6 +7,17 @@ export const NavbarUrls = {
 	PORTFOLIO: { name: 'Portfolio', url: '/portfolio' },
 	CONTACT: { name: 'Contact', url: '/contact' },
 };
+
+export enum ProjectDomain {
+	ALL = 'all',
+	WEB = 'web',
+	REACT_NATIVE = 'react native',
+	FLUTTER = 'flutter',
+	GAME = 'games',
+	BLENDER = 'blender',
+	UI_UX = 'uI/uX',
+	AUTOMATION_TOOLING = 'automation & tooling',
+}
 
 export const MyExperiences = [
 	{
@@ -128,26 +141,27 @@ export const MyPortfolio = [
 
 export const MyContacts = [
 	{
-		asset: '/assets/icons/contact/email.svg',
+		asset: <SVG_ASSETS.Email />,
 		title: 'Email',
 		content: 'rishav.nitdgp24@gmail.com',
 	},
 	{
-		asset: '/assets/icons/contact/linkedin.svg',
+		asset: <SVG_ASSETS.LinkedIn />,
 		title: 'LinkedIn',
 		content: 'rishav-devraj',
 	},
 	{
-		asset: '/assets/icons/contact/github.svg',
+		asset: <SVG_ASSETS.Github />,
 		title: 'Github',
 		content: 'rishav-jha-mech',
 	},
 	{
-		asset: '/assets/icons/contact/location.svg',
+		asset: <SVG_ASSETS.Location />,
 		title: 'Location',
 		content: 'Bangalore, India',
 	},
 ];
+
 export const AllProjects: {
 	year: number;
 	project: string;
